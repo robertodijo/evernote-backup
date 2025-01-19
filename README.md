@@ -45,13 +45,13 @@ $ pip install --user evernote-backup
 [![Docker Image Size (arm64)](<https://img.shields.io/docker/image-size/vzhd1701/evernote-backup?arch=arm64&label=image%20size%20(arm64)>)](https://hub.docker.com/r/vzhd1701/evernote-backup)
 
 ```bash
-$ docker run --rm -t -v "$PWD":/tmp vzhd1701/evernote-backup:latest
+docker run --rm -t -v "$PWD":/tmp vzhd1701/evernote-backup:latest
 ```
 
 To log in to Evernote using OAuth with Docker, you'll have to forward port 10500 for a callback:
 
 ```bash
-$ docker run --rm -t -v "$PWD":/tmp -p 10500:10500 vzhd1701/evernote-backup:latest init-db --oauth
+docker run --rm -t -v "$PWD":/tmp -p 10500:10500 vzhd1701/evernote-backup:latest init-db --oauth
 ```
 
 ### From source
